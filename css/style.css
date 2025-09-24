@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  display: flex; justify-content: space-between;
+  align-items: center; background: #004080; color: white;
+  padding: 10px 20px;
+}
+
+.logo { height: 50px; }
+
+nav ul {
+  list-style: none; display: flex;
+}
+
+nav ul li { margin: 0 10px; }
+
+nav ul li a {
+  color: white; text-decoration: none;
+}
+
+nav ul li a.active { font-weight: bold; border-bottom: 2px solid yellow; }
+
+.menu-toggle {
+  display: none; background: none; border: none; color: white; font-size: 24px;
+}
+
+.hero {
+  background: url("../images/school1.jpg") no-repeat center/cover;
+  color: white; text-align: center; padding: 100px 20px;
+}
+
+.btn {
+  background: #ffcc00; color: #000; padding: 10px 20px;
+  border: none; text-decoration: none; font-weight: bold;
+}
+
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px; padding: 20px;
+}
+
+footer {
+  background: #004080; color: white; text-align: center; padding: 10px;
+}
+
+@media (max-width: 768px) {
+  nav ul { display: none; flex-direction: column; }
+  nav.active ul { display: flex; }
+  .menu-toggle { display: block; }
+}
